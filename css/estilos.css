@@ -1,0 +1,264 @@
+body {
+  font-family: 'Dancing Script', cursive;
+  background-color: #02010a;
+}
+
+header {
+  background-color: #5b7989;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  animation: slidein 5s;
+}
+
+footer {
+  background-color: #C6d5c5;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+img {
+  box-shadow: 2px 2px 2px 2px #02010a;
+  width: 100%;
+}
+
+figcaption {
+  text-decoration: underline;
+  text-align: center;
+  font-size: 1.5em;
+  color: black;
+}
+
+.menu a {
+  color: white;
+  text-shadow: 2px 2px 2px #02010a;
+  text-align: left;
+  font-size: 1.5em;
+}
+
+.footer a {
+  color: black;
+}
+
+.cabecera {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.titulo {
+  color: white;
+  text-shadow: 2px 2px 2px #02010a;
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 2%;
+}
+
+.menu {
+  color: white;
+  text-shadow: 2px 2px 2px #02010a;
+  text-align: right;
+  flex-grow: 1;
+  margin: auto;
+}
+
+.footer {
+  display: inline;
+  width: 25%;
+  margin-left: 1.5em;
+}
+
+.imagencentral {
+  background: #82c3a6;
+  padding: 5%;
+}
+
+.imagensecundaria {
+  background: #d5c75f;
+  border: 1px;
+  padding: 5%;
+}
+
+.imagensecundaria > div{
+  display: flex;
+  margin: auto;
+}
+
+
+.galeria > div {
+  background-color: #d5c75f;
+}
+
+.galeria1 > div {
+  display: inline;
+  margin-left: 3%;
+
+}
+
+.galeria2 > div {
+  display: inline;
+  margin-left: 3%;
+}
+
+a.inicio:link {
+  text-decoration: none;
+}
+
+a.paisajes:link {
+  text-decoration: none;
+}
+
+a.retratos:link {
+  text-decoration: none;
+}
+
+
+#paisaje1 {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+#paisajes {
+  width: 90%;
+  transition: rotate;
+  display: block;
+  margin: auto;
+}
+
+#paisajes:hover {
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+
+#retratos {
+  width: 90%;
+  transition: translate;
+  display: block;
+  margin: auto;
+}
+
+#retratos:hover {
+  transform: translate(20px, -5px);
+  box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+
+#galeriapaisaje1 {
+  -webkit-filter: blur(10px);
+}
+
+#galeriapaisaje3 {
+  -webkit-filter: sepia(90%);
+}
+
+#galeriaretrato1 {
+  -webkit-filter: blur(10px);
+}
+
+#galeriaretrato3 {
+  -webkit-filter: sepia(90%);
+}
+
+img[id*="galeriaretrato"] {
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+img[id*="galeriapaisaje"] {
+  width: 90%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+img[class*="pares"] {
+  -webkit-filter: grayscale(100%);
+}
+
+@-webkit-keyframes slidein{
+  0% {
+  margin-top: 150%;
+  }
+
+  60% {
+  margin-top: -5%;
+  }
+
+  100% {
+  margin-top: 0%;
+  }
+}
+
+
+@media (max-width:900px) {
+
+  body {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  footer {
+    display: block;
+    padding-left: 1.5em;
+    width: 100%;
+  }
+
+  .cabecera {
+    display: block;
+  }
+
+  .titulo {
+    text-align: center;
+  }
+
+  .menu {
+    text-align: center;
+  }
+
+  .imagensecundaria {
+    display: block;
+  }
+
+  .galeria {
+    display: block;
+    margin: auto;
+  }
+
+
+}
+
+@media (min-width:900px) {
+
+  footer {
+    display: flex;
+  }
+
+  .titulo {
+    width:50%
+    display: flex;
+  }
+
+  .menu {
+    width:50%
+    display: flex;
+    text-align: right;
+  }
+
+  .imagensecundaria {
+    display: flex;
+  }
+
+  .galeria1 {
+    display: flex;
+  }
+
+  .galeria2 {
+    display: flex;
+  }
+
+  body {
+    width: 900px;
+    margin: auto;
+  }
+}
